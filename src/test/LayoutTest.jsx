@@ -7,7 +7,7 @@ const LayoutTest = (props) => {
       <div className="col-1-of-6 c-sidebar">
         <div className="c-sidebar c-sidebar-barand">
           Core
-          <small>UI </small>
+          <small>UI chan wwa </small>
         </div>
         <ul className="c-sidebar-nav">
           <li className="c-sidebar-nav c-sidebar-nav-item">
