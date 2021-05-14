@@ -1,4 +1,5 @@
 import React from "react";
+import "./cards.css";
 import "./style.css";
 
 const LayoutTest = (props) => {
@@ -118,7 +119,7 @@ const LayoutTest = (props) => {
               </li>
               <li className="c-header-nav-item">
                 <img
-                  src="./img/chân dung.jpg"
+                  src="./src/img/photo1.jpg"
                   className="c-header-nav-item-img"
                   alt="photo1"
                 />
@@ -149,6 +150,58 @@ const LayoutTest = (props) => {
           </div>
           <hr style={{ color: "#64676d" }} />
         </header>
+        <div className="c-body">
+          <div className="row">
+            <div className="col-1-of-4 card card-1">
+              <div className="row">
+                <div className="card-information">
+                  <div className="card-value">9.832</div>
+                  <div>Members online</div>
+                </div>
+                <div className="card-icon">
+                  <i class="fa fa-cog" aria-hidden="true"></i>
+                  <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+            <div className="col-1-of-4 card card-2">
+              <div className="row">
+                <div className="card-information">
+                  <div className="card-value">9.832</div>
+                  <div>Members online</div>
+                </div>
+                <div className="card-icon">
+                  <i class="fa fa-cog" aria-hidden="true"></i>
+                  <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+            <div className="col-1-of-4 card card-3">
+              <div className="row">
+                <div className="card-information">
+                  <div className="card-value">9.832</div>
+                  <div>Members online</div>
+                </div>
+                <div className="card-icon">
+                  <i class="fa fa-cog" aria-hidden="true"></i>
+                  <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+            <div className="col-1-of-4 card card-4">
+              <div className="row">
+                <div className="card-information">
+                  <div className="card-value">9.832</div>
+                  <div>Members online</div>
+                </div>
+                <div className="card-icon">
+                  <i class="fa fa-cog" aria-hidden="true"></i>
+                  <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
