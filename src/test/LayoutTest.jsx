@@ -1,4 +1,5 @@
 import React from "react";
+import BodyChart from "./BodyChart";
 import "./cards.css";
 import "./style.css";
 
@@ -201,6 +202,7 @@ const LayoutTest = (props) => {
               </div>
             </div>
           </div>
+          <BodyChart />
         </div>
       </div>
     </div>
