@@ -1,4 +1,47 @@
 .chart {
   background-color: white;
   color: black;
+  margin-left: 25px;
+  margin-right: 35px;
+}
+.chart-body {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.chart-body-left {
+  width: 70%;
+  display: inline-block;
+}
+.chart-body-left-day {
+  font-size: smaller;
+}
+
+.chart-body-right {
+  width: 20%;
+  float: right;
+}
+.chart-body-end {
+  width: 5%;
+  float: right;
+}
+
+.btn-outline-secondary {
+  color: #75797e;
+  border-color: #ced2d8;
+  border-radius: 3px;
+  line-height: 2;
+  width: 50px;
+  cursor: pointer;
+  background-color: white;
+
+  transition: all 0.2s;
+}
+.btn-outline-secondary:hover {
+  background-color: #ebedef;
+}
+
+.btn-outline-secondary-2 {
+  background-color: #ebedef;
+  /* font-size: smaller; */
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import img from ".././img/photo1.jpg";
 import BodyChart from "./BodyChart";
 import "./cards.css";
 import "./style.css";
@@ -120,9 +121,9 @@ const LayoutTest = (props) => {
               </li>
               <li className="c-header-nav-item">
                 <img
-                  src="./src/img/photo1.jpg"
+                  src={img}
                   className="c-header-nav-item-img"
-                  alt="photo1"
+                  alt={"photo1"}
                 />
               </li>
               <li className="c-header-nav-item">
@@ -152,7 +153,7 @@ const LayoutTest = (props) => {
           <hr style={{ color: "#64676d" }} />
         </header>
         <div className="c-body">
-          <div className="row">
+          <div className="row" style={{ marginBottom: "30px" }}>
             <div className="col-1-of-4 card card-1">
               <div className="row">
                 <div className="card-information">
