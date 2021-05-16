@@ -35,36 +35,67 @@ function BodyChart() {
             <div className="footer footer-1">
               <div className="footer-text">Visits</div>
               <strong>29.730 Users(40%)</strong>
-              <div class="progress progress-xs mt-2">
+              <div class="progress progress-xs ">
                 <div
-                  class="progress-bar bg-success"
+                  class="progress-bar bg-success bg-success-1"
                   role="progressbar"
                   aria-valuenow="40"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  // style="width: 40%;"
                 ></div>
               </div>
             </div>
             <div className="footer footer-2">
               <div className="footer-text">Unique</div>
               <strong>24.093 Users(20%)</strong>
-              <div>###</div>
+              <div class="progress progress-xs">
+                <div
+                  class="progress-bar bg-success bg-success-2"
+                  role="progressbar"
+                  aria-valuenow="40"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
             </div>
             <div className="footer footer-3">
               <div className="footer-text">Pageviews</div>
               <strong>78.706 Viewer(60%)</strong>
-              <div>###</div>
+              <div class="progress progress-xs">
+                <div
+                  class="progress-bar bg-success bg-success-3"
+                  role="progressbar"
+                  aria-valuenow="40"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
             </div>
             <div className="footer footer-4">
               <div className="footer-text">New Users</div>
               <strong>22.123 Users(80%)</strong>
-              <div>###</div>
+              <div class="progress progress-xs">
+                <div
+                  class="progress-bar bg-success bg-success-4"
+                  role="progressbar"
+                  aria-valuenow="40"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
             </div>
             <div className="footer footer-5">
               <div className="footer-text">Bounce Rate</div>
               <strong>Average Rate(40.15%)</strong>
-              <div>###</div>
+              <div class="progress progress-xs">
+                <div
+                  class="progress-bar bg-success bg-success-5"
+                  role="progressbar"
+                  aria-valuenow="40"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
             </div>
           </div>
         </footer>
