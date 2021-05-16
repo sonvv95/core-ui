@@ -161,8 +161,8 @@ const LayoutTest = (props) => {
                   <div>Members online</div>
                 </div>
                 <div className="card-icon">
-                  <i class="fa fa-cog" aria-hidden="true"></i>
-                  <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                  <i className="fa fa-cog" aria-hidden="true"></i>
+                  <i className="fa fa-sort-desc" aria-hidden="true"></i>
                 </div>
               </div>
             </div>
@@ -173,8 +173,8 @@ const LayoutTest = (props) => {
                   <div>Members online</div>
                 </div>
                 <div className="card-icon">
-                  <i class="fa fa-cog" aria-hidden="true"></i>
-                  <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                  <i className="fa fa-cog" aria-hidden="true"></i>
+                  <i className="fa fa-sort-desc" aria-hidden="true"></i>
                 </div>
               </div>
             </div>
@@ -185,8 +185,8 @@ const LayoutTest = (props) => {
                   <div>Members online</div>
                 </div>
                 <div className="card-icon">
-                  <i class="fa fa-cog" aria-hidden="true"></i>
-                  <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                  <i className="fa fa-cog" aria-hidden="true"></i>
+                  <i className="fa fa-sort-desc" aria-hidden="true"></i>
                 </div>
               </div>
             </div>
@@ -197,8 +197,8 @@ const LayoutTest = (props) => {
                   <div>Members online</div>
                 </div>
                 <div className="card-icon">
-                  <i class="fa fa-cog" aria-hidden="true"></i>
-                  <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                  <i className="fa fa-cog" aria-hidden="true"></i>
+                  <i className="fa fa-sort-desc" aria-hidden="true"></i>
                 </div>
               </div>
             </div>
