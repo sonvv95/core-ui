@@ -49,13 +49,13 @@
   border-bottom-left-radius: 4px;
 }
 .body-end-body-rate {
-  width: 48%;
+  width: 49.6%;
   float: left;
-  background-color: burlywood;
+  /* background-color: burlywood; */
 }
 .progress {
   height: 3px;
-  padding-bottom: 1px;
+  margin-top: 3px;
 }
 .progress-group-text {
   float: left;
@@ -65,6 +65,7 @@
 .progress-group-bars {
   float: left;
   width: 80%;
+  margin-top: 4px;
 }
 .bg-info {
   background-color: #39f !important;
@@ -73,4 +74,61 @@
 .bg-danger {
   background-color: #e55353 !important;
   /* width: 78%; */
+}
+.body-end-body-rate-left-row {
+  margin-bottom: 20px !important;
+}
+.bg-warning {
+  background-color: #f9b115;
+}
+.bg-warning-3 {
+  background-color: #2eb85c;
+}
+.body-end-body-rate-right-row {
+  margin-bottom: 16px;
+}
+.body-end-body-rate-right-row-1 {
+  display: inline;
+  margin-bottom: 3px !important;
+}
+.body-end-body-rate-right-icon {
+  float: left;
+  margin-right: 8px;
+  margin-left: 5px;
+}
+.body-end-body-rate-right-information {
+  float: left;
+  width: 79%;
+  font-size: 90%;
+  padding-top: 2px;
+}
+.body-end-body-rate-right-rate {
+  float: left;
+  font-size: 12px;
+  font-weight: 700;
+  padding-top: 5px;
+}
+.note {
+  text-align: center;
+}
+.px {
+  position: relative;
+  top: 4px;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.px-1 {
+  background-color: #39f;
+}
+.px-2 {
+  background-color: #e55353;
+}
+.badge-info {
+  background-color: #39f;
+}
+.badge-danger {
+  background-color: #e55353;
 }
