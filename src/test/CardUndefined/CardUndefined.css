@@ -5,6 +5,7 @@
   background-color: white;
   border-radius: 10px;
   box-sizing: border-box;
+  box-shadow: 5px 5px 5px 5px #ddeaf7;
 }
 .card-undefined-information {
   margin: 10px 0;

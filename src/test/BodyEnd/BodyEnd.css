@@ -1,0 +1,76 @@
+.body-end {
+  background-color: white;
+  margin-left: 25px;
+  margin-right: 35px;
+  border-radius: 3px;
+  color: rgb(29, 29, 29);
+  margin-bottom: 30px;
+}
+.body-end-header {
+  font-size: 15px;
+  padding-top: 15px;
+  padding-left: 20px;
+  margin-bottom: 10px !important;
+}
+.body-end-hr {
+  background-color: #ebedef;
+  height: 1px;
+}
+.body-end-body {
+  margin: 20px auto;
+}
+.body-end-body-information {
+  width: 24%;
+  float: left;
+  margin-left: 10.5px;
+  padding-left: 25px;
+}
+.body-end-body-information-text {
+  font-size: smaller;
+}
+.body-end-body-information-1 {
+  border-left: 4px solid #39f;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.body-end-body-information-2 {
+  border-left: 4px solid #e55353;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.body-end-body-information-3 {
+  border-left: 4px solid #f9b115;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.body-end-body-information-4 {
+  border-left: 4px solid #2eb85c;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.body-end-body-rate {
+  width: 48%;
+  float: left;
+  background-color: burlywood;
+}
+.progress {
+  height: 3px;
+  padding-bottom: 1px;
+}
+.progress-group-text {
+  float: left;
+  width: 15%;
+  font-size: smaller;
+}
+.progress-group-bars {
+  float: left;
+  width: 80%;
+}
+.bg-info {
+  background-color: #39f !important;
+  width: 34%;
+}
+.bg-danger {
+  background-color: #e55353 !important;
+  /* width: 78%; */
+}

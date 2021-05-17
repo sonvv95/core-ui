@@ -1,6 +1,7 @@
 import React from "react";
 import img from ".././img/photo1.jpg";
 import BodyChart from "./BodyChart";
+import BodyEnd from "./BodyEnd";
 import "./cards.css";
 import CardUndefined from "./CardUndefined";
 import "./style.css";
@@ -206,6 +207,7 @@ const LayoutTest = (props) => {
           </div>
           <BodyChart />
           <CardUndefined />
+          <BodyEnd />
         </div>
       </div>
     </div>

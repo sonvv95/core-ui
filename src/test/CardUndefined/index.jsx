@@ -4,7 +4,7 @@ CardUndefined.propTypes = {};
 
 function CardUndefined(props) {
   return (
-    <div className="row" style={{ marginTop: "25px" }}>
+    <div className="row" style={{ marginTop: "25px", marginBottom: "25px" }}>
       <div className="card-undefined card-undefined-1">
         <div className="card-header card-header-1">
           <i class="fa fa-facebook card-header-icon" aria-hidden="true"></i>
