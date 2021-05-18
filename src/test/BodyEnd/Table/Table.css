@@ -1,0 +1,98 @@
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-top: 40px;
+  /* background-color: #ebedef; */
+}
+.table-line {
+  /* background-color: burlywood; */
+  border: 6px dashed green !important;
+  width: 100%;
+  height: 30px !important;
+  /* background-color: white; */
+}
+tr {
+  border: 6px dashed green !important;
+  width: 100%;
+  height: 30px !important;
+  /* background-color: burlywood; */
+}
+.table-tbody {
+  border: 1px dashed green !important;
+}
+.table-head {
+  background-color: #ebedef;
+}
+.col-user {
+  text-align: start;
+}
+.text-center-country {
+  text-align: start;
+}
+.c-avatar {
+  /* margin-left: 10px; */
+}
+.c-avatar-img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-image: cover !important;
+  /* margin-left: 10px !important; */
+}
+.c-ensign-img {
+  height: 25px;
+  width: 48px;
+  background-image: cover !important;
+}
+.text-center-icon {
+  padding-right: 15px;
+}
+.text-center-img {
+  padding-top: 7px;
+}
+.text-muted {
+  font-size: smaller;
+}
+.text-muted-2 {
+  position: relative;
+  font-size: 14px;
+  top: -5px;
+}
+.float-left {
+  float: left;
+  font-size: 13px;
+  width: 50%;
+  padding-top: 6px;
+}
+.float-right {
+  float: left;
+}
+.text-muted {
+  font-size: 11.5px;
+}
+.bg-success {
+  background-color: #2eb85c;
+}
+.bg-success-2 {
+  background-color: #39f !important;
+}
+.bg-success-3 {
+  background-color: #f9b115 !important;
+}
+.bg-success-4 {
+  background-color: #e55353 !important;
+}
+.bg-success-5 {
+  background-color: #39f !important;
+}
+.bg-success-6 {
+  background-color: #2eb85c !important;
+}
+.progress-table {
+  margin-top: 0px !important;
+  /* padding-bottom: 5px; */
+}
+.text-center-pay {
+  text-align: center !important;
+  font-size: 23px;
+}

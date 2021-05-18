@@ -1,5 +1,6 @@
 import React from "react";
 import "./BodyEnd.css";
+import Table from "./Table/Table";
 
 BodyEnd.propTypes = {};
 
@@ -352,6 +353,7 @@ function BodyEnd(props) {
               </div>
             </div>
           </div>
+          <Table />
         </div>
       </div>
     </div>
