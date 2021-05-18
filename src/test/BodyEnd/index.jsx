@@ -32,7 +32,7 @@ function BodyEnd(props) {
             </div>
           </div>
         </div>
-        <div className="row" style={{ margin: "0 11px" }}>
+        <div className="row " style={{ margin: "0 11px" }}>
           <div className="body-end-body-rate body-end-body-rate-left">
             <div className="row body-end-body-rate-left-row ">
               <div className="progress-group-text">Monday</div>
