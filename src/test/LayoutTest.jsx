@@ -8,17 +8,21 @@ import "./style.css";
 
 const LayoutTest = (props) => {
   return (
-    <div className="row">
-      <div className="col-1-of-6 c-sidebar">
+    <div className="row" style={{ marginBottom: "none" }}>
+      <div className="col-1-of-6 c-sidebar scroll">
         <div className="c-sidebar c-sidebar-barand">
-          Core
-          <small>UI chan dai vt </small>
+          <div className="row">
+            <div className="c-sidebar-1">Core</div>
+            <small>UI</small>
+            <p className="c-sidebar-2">React.JS</p>
+            <mark className="c-sidebar-mark">PRO</mark>
+          </div>
         </div>
         <ul className="c-sidebar-nav">
           <li className="c-sidebar-nav c-sidebar-nav-item">
             <i className="fa fa-book c-sidebar-nav-icon" aria-hidden="true"></i>
             Dashboard
-            <mark>NEW</mark>
+            <mark className="c-sidebar-nav-item-mark">NEW</mark>
           </li>
           <li className="c-sidebar-nav c-sidebar-nav-item-category">THEME</li>
           <li className="c-sidebar-nav c-sidebar-nav-item">
@@ -73,7 +77,7 @@ const LayoutTest = (props) => {
               aria-hidden="true"
             ></i>
             Widgets
-            <mark>NEW</mark>
+            <mark className="c-sidebar-nav-item-mark">NEW</mark>
           </li>
           <li className="c-sidebar-nav c-siderbar-item-category">EXTRAS</li>
           <li className="c-sidebar-nav c-siderbar-nav-item">
@@ -92,21 +96,27 @@ const LayoutTest = (props) => {
           </li>
           <li className="c-sidebar-nav c-siderbar-nav-item">
             <i className="fa fa-book c-sidebar-nav-icon" aria-hidden="true"></i>
-            TryCoreUIPRO
+            TryCoreUiPRO
           </li>
         </ul>
         <div className="c-siderbar-button"></div>
       </div>
       <div className="col-5-of-6">
-        <header>
+        <header className="header">
           <div className="row row-c-header-bars" style={{ marginBottom: 0 }}>
-            <button className="c-header-bars">
+            <div className="c-header-bars">
               <i className="fa fa-bars" aria-hidden="true"></i>
-            </button>
+            </div>
             <ul className="c-header-nav c-header-nav-left">
-              <a className="c-header-nav-link">Dashboard</a>
-              <a className="c-header-nav-link">Users</a>
-              <a className="c-header-nav-link">Settings</a>
+              <a href="abc" className="c-header-nav-link">
+                Dashboard
+              </a>
+              <a href="abc" className="c-header-nav-link">
+                Users
+              </a>
+              <a href="###" className="c-header-nav-link">
+                Settings
+              </a>
             </ul>
             <ul className="c-header-nav c-header-nav-right">
               <li className="c-header-nav-item">
@@ -137,15 +147,15 @@ const LayoutTest = (props) => {
           <div className="row row-c-header-bars" style={{ marginBottom: 0 }}>
             <ol className="c-header-item-left">Home / Dashboard </ol>
             <div className="c-header-item-right">
-              <a className="c-header-item-right-title">
+              <a href="###" className="c-header-item-right-title">
                 <i className="fa fa-commenting-o" aria-hidden="true"></i>
               </a>
-              <a className="c-header-item-right-title">
+              <a href="###" className="c-header-item-right-title">
                 <i className="fa fa-ils" aria-hidden="true">
                   Dashboard
                 </i>
               </a>
-              <a className="c-header-item-right-title">
+              <a href="###" className="c-header-item-right-title">
                 <i className="fa fa-cog" aria-hidden="true">
                   Setting
                 </i>
@@ -209,6 +219,34 @@ const LayoutTest = (props) => {
           <CardUndefined />
           <BodyEnd />
         </div>
+        <div class="end">&nbsp;</div>
+        <hr />
+        <footer>
+          <div className="row" style={{ height: "50px" }}>
+            <div className="footer footer-left">
+              <a
+                className="footer-float-left footer-float-left-1"
+                href="https://coreui.io/"
+              >
+                CoreIU
+              </a>
+              <div className="footer-float-left footer-left-text">
+                c 2020 creativeLabs
+              </div>
+            </div>
+            <div className="footer footer-right">
+              <div className="footer-float-left footer-right-text">
+                Powered by
+              </div>
+              <a
+                className="footer-float-left footer-float-left-2"
+                href="https://coreui.io/react/"
+              >
+                CoreIU for React
+              </a>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );

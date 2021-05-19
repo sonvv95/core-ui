@@ -5,6 +5,9 @@
   border-radius: 3px;
   color: rgb(29, 29, 29);
   margin-bottom: 30px;
+  border-bottom: 0.5px solid #ebedef;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 .body-end-header {
   font-size: 15px;

@@ -72,61 +72,40 @@ body {
   line-height: 1.7;
   color: #777777;
 }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 60px;
-  /* animation-name: animationtest;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-delay: 3s; */
-}
-.heading-primary--main {
-  display: block;
-  font-size: 62px;
-  font-weight: 400;
-  letter-spacing: 15px;
-  animation: moveInLeft 1s ease-out;
-}
-.heading-primary--sub {
-  display: block;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 18px;
-  animation: moveInRight 1s ease-out;
-}
-
-.heading-secondary {
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  display: inline-block;
-  letter-spacing: 2rem;
+.c-sidebar {
   cursor: pointer;
-  background-image: linear-gradient(to right, #8e9efc, #1c3eff);
-  color: transparent;
-  -webkit-background-clip: text;
-  transition: all 0.5s;
 }
-.heading-secondary:hover {
-  transform: scale(1.1) skewY(5deg);
-  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+small {
+  float: left;
+  font-size: 12px;
+  margin: 0 3px;
+}
+.c-sidebar-mark {
+  font-size: 10px;
+  background-color: rgb(102, 168, 255);
+  color: white;
+  float: left;
+  border-radius: 3px;
+}
+.c-sidebar-nav-item-mark {
+  font-size: 13px;
+  color: white;
+  font-weight: 500;
+  background-color: rgb(102, 168, 255);
+  border-radius: 3px;
+  float: right;
 }
 
-.heading-tertiary {
-  font-size: 1.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
+.c-sidebar-1 {
+  width: 40%;
+  float: left;
+  text-align: end;
 }
-
-.paragraph {
-  font-size: 1.6rem;
+.c-sidebar-2 {
+  float: left;
+  color: #80d0ff;
+  font-weight: 300;
 }
-.paragraph:not(:last-child) {
-  margin-bottom: 3rem;
-}
-
 .c-header {
   float: left;
   display: inline;
@@ -134,6 +113,12 @@ body {
 }
 .c-header-bars {
   margin-left: 2rem;
+  width: 3%;
+  float: left;
+  font-size: 23px;
+  margin-top: -5px;
+  padding-left: 3px;
+  cursor: pointer;
 }
 .c-header-nav {
   display: inline;
@@ -141,6 +126,9 @@ body {
 }
 .c-header-nav-link {
   padding-left: 2rem;
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
 }
 .c-header-nav-item {
   float: left;
@@ -166,6 +154,7 @@ body {
   padding-left: 2rem;
   width: 70%;
   cursor: pointer;
+  color: black;
 }
 .c-header-item-right {
   display: inline;
@@ -176,6 +165,7 @@ body {
 .c-header-item-right-title {
   padding-left: 2rem;
   cursor: pointer;
+  color: black;
 }
 
 .row {
@@ -359,4 +349,47 @@ body {
 .c-body {
   padding-top: 30px;
   background-color: #ebedef;
+}
+.end {
+  background-color: #ebedef;
+  height: 30px;
+  margin-top: -30px;
+}
+footer {
+  background-color: #ebedef;
+}
+.footer-left {
+  width: 79%;
+  font-size: smaller;
+  height: 41px;
+  padding-top: 10px;
+}
+.footer-right {
+  width: 18%;
+  padding-left: 9px;
+  font-size: smaller;
+  height: 41px;
+  padding-top: 10px;
+}
+.footer-float-left {
+  float: left;
+}
+.footer-float-left-1 {
+  margin-right: 5px;
+  text-decoration: none;
+}
+.footer-float-left-2 {
+  margin-left: 5px;
+  text-decoration: none;
+}
+.scroll {
+  position: sticky;
+  top: 0;
+  overflow-y: scroll;
+  max-height: 620px;
+}
+.header {
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
