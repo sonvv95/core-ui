@@ -1,0 +1,28 @@
+.card {
+  flex: 1;
+  background-image: linear-gradient(to bottom right, #39f, rgb(165, 209, 253));
+  margin: 0 10px;
+  padding-left: 20px;
+  height: 130px;
+  padding-top: 20px;
+}
+.table_content {
+  width: 100%;
+
+  &_thead {
+    background-color: #d8dbe0;
+    // &_tr {
+    //   background-color: #d8dbe0;
+    // }
+  }
+  &_tbody {
+    text-align: center !important;
+
+    &-tr {
+      transition: all 0.3s;
+      &:hover {
+        background-color: #c9d5e9;
+      }
+    }
+  }
+}

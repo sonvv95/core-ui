@@ -103,7 +103,7 @@ const AsideBar = (props) => {
           setOpenBar(true);
         }}
       >
-        >
+        {">"}
       </div>
     </div>
   );
