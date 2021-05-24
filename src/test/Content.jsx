@@ -80,17 +80,17 @@ const Content = (props) => {
         background: "white",
       }}
     >
-      <div className="row" style={{ display: "flex", marginBottom: "20px" }}>
+      <div className="row" style={{ display: "flex", marginBottom: "30px" }}>
         {card.map((card, index) => {
           return (
             <div className="card">
-              <div>{card.number}</div>
-              <div>{card.text}</div>
+              <div className="card_number">{card.number}</div>
+              <div className="card_text">{card.text}</div>
             </div>
           );
         })}
       </div>
-      <table className="table_content">
+      <table className="table_content" style={{ borderCollapse: "collapse" }}>
         <thead className="table_content_thead">
           <tr className="table_content_thead_tr">
             {Items.map((item) => {
