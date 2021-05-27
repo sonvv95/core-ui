@@ -1,0 +1,50 @@
+.item {
+  &:hover {
+    background: blue;
+  }
+
+  &_header {
+    text-align: center !important;
+    padding-left: 25px;
+    background-color: #1f3253;
+    &_1 {
+      font-weight: 600;
+    }
+    &_2 {
+      margin-top: -2px;
+      font-weight: 600;
+    }
+    &_3 {
+      color: #80d0ff;
+      font-weight: 100;
+      padding-left: 2px;
+    }
+    &_4 {
+      padding-left: 2px;
+      font-size: 8px;
+      font-weight: 500;
+      color: white;
+      background-color: rgb(95, 95, 255);
+      width: 20px;
+      height: 12px;
+      text-align: center;
+    }
+  }
+  &_mark {
+    float: right;
+    margin-right: 10px;
+    border-radius: 3px;
+    color: white;
+    font-weight: 500;
+    font-size: 11px;
+    height: 15px;
+    margin-top: 4px;
+
+    &_1 {
+      background-color: #5f5fff !important;
+    }
+    &_2 {
+      background-color: rgb(230, 114, 114) !important;
+    }
+  }
+}

@@ -1,28 +1,132 @@
 .card {
   flex: 1;
-  background-image: linear-gradient(to bottom right, #39f, rgb(165, 209, 253));
+  // background-image: linear-gradient(45deg, #39f, #2982cc) !important;
   margin: 0 10px;
-  padding-left: 20px;
+  padding-left: 25px;
   height: 130px;
   padding-top: 20px;
+  color: white;
+  border-radius: 5px;
+
+  &_1 {
+    background-image: linear-gradient(45deg, #8577ff, #1f1498) !important;
+  }
+  &_2 {
+    background-image: linear-gradient(
+      45deg,
+      rgb(99, 174, 250),
+      #2982cc
+    ) !important;
+  }
+  &_3 {
+    background-image: linear-gradient(45deg, #fad380, #f6960b) !important;
+  }
+  &_4 {
+    background-image: linear-gradient(45deg, #fa7272, #d93737) !important;
+  }
+
+  &_number {
+    font-size: larger;
+    font-weight: 500;
+    margin-bottom: 3px;
+  }
+  &_text {
+    font-size: 14px;
+  }
 }
 .table_content {
   width: 100%;
+  border-collapse: collapse;
 
   &_thead {
     background-color: #d8dbe0;
-    // &_tr {
-    //   background-color: #d8dbe0;
-    // }
+    max-height: 30px !important;
   }
   &_tbody {
     text-align: center !important;
+
+    &_Name {
+      font-size: smaller;
+    }
+    &_usage {
+      font-size: smaller;
+    }
+    &_act {
+      font-size: 14px;
+      font-weight: 600;
+    }
 
     &-tr {
       transition: all 0.3s;
       &:hover {
         background-color: #c9d5e9;
       }
+    }
+  }
+}
+tr,
+th {
+  border: 1px solid #d8dbe0;
+  padding: 18px 0;
+}
+td {
+  padding: 18px 0;
+}
+
+.socialNetwork {
+  flex: 1;
+  margin: 0 10px;
+  height: 180px;
+  border-radius: 5px;
+  box-sizing: 0 5px 5px 5px #d8caca;
+  // background-color: aquamarine;
+
+  &_top {
+    background-color: brown;
+    height: 100px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    &_1 {
+      background-color: #245f9b;
+    }
+    &_2 {
+      background-color: #39f;
+    }
+    &_3 {
+      background-color: #366fa8;
+    }
+    &_4 {
+      background-color: #f9b115;
+    }
+
+    &_icon {
+      margin-top: 32px;
+      font-size: 35px;
+      color: white;
+    }
+  }
+  &_bottom {
+    height: 80px;
+    flex: 1;
+    text-align: center;
+    background-color: #f1f1f1;
+
+    &_1 {
+      border-bottom-left-radius: 5px;
+      border-right: 0.1px solid rgb(189, 189, 189);
+    }
+    &_2 {
+      border-bottom-right-radius: 5px;
+    }
+    &_numbers {
+      padding-top: 17px;
+      font-size: 17px;
+      font-weight: 600;
+    }
+    &_text {
+      font-size: smaller;
+      color: rgb(39, 39, 39);
     }
   }
 }

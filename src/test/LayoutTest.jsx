@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AsideBar from "./AsideBar";
+import Header from "./Components/Header/Header";
 import Content from "./Content";
-import Header from "./Header";
 
 const LayoutTest = (props) => {
   const [openSideBar, setOpen] = useState(true);

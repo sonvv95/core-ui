@@ -1,0 +1,30 @@
+.header {
+  &_top {
+    float: left;
+    margin: none !important;
+    margin-top: 8px;
+
+    &_left {
+      float: left;
+      list-style: none;
+      &_li {
+        font-size: smaller;
+        cursor: pointer;
+      }
+    }
+    &_right {
+      float: right;
+      &_img {
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        position: relative;
+        margin-top: 8px;
+        margin-left: 20px;
+      }
+      &_li {
+        top: 10px;
+      }
+    }
+  }
+}
