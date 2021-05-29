@@ -37,7 +37,8 @@ const AsideBar = (props) => {
   return (
     <div
       style={{
-        width: openSideBar && open ? 256 : open ? 80 : 0,
+        // width: openSideBar && open ? 256 : open ? 80 : 0,
+        width: openSideBar && open ? 256 : 80,
         background: "#3c4b64",
         height: "100vh",
         overflow: "auto",

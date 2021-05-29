@@ -1,40 +1,42 @@
 import React from "react";
-import avata_1 from "./avatar1.jpg";
+import avatar_1 from "./avatar1.jpg";
 import "./Header.scss";
+
+const header_left = [
+  {
+    item: "Dashboard",
+    class: "header_top_left_li header_top_left_li_1 ",
+  },
+  {
+    item: "Users",
+    class: "header_top_left_li header_top_left_li_2 ",
+  },
+  {
+    item: "Settings",
+    class: "header_top_left_li header_top_left_li_3 ",
+  },
+];
+const header_right = [
+  {
+    class: "fa fa-list-ul header_top_right_li header_top_right_li_5",
+  },
+  {
+    class: "fa fa-envelope-o header_top_right_li header_top_right_li_4",
+  },
+  {
+    class: "fa fa-server header_top_right_li header_top_right_li_3",
+  },
+  {
+    class: "fa fa-bell-o header_top_right_li header_top_right_li_2",
+  },
+  {
+    class: "fa fa-moon-o header_top_right_li header_top_right_li_1 ",
+  },
+];
 
 const Header = (props) => {
   const { setOpen } = props;
-  const header_left = [
-    {
-      item: "Dashboard",
-      class: "header_top_left_li header_top_left_li_1 ",
-    },
-    {
-      item: "Users",
-      class: "header_top_left_li header_top_left_li_2 ",
-    },
-    {
-      item: "Settings",
-      class: "header_top_left_li header_top_left_li_3 ",
-    },
-  ];
-  const header_right = [
-    {
-      class: "fa fa-list-ul header_top_right_li header_top_right_li_5",
-    },
-    {
-      class: "fa fa-envelope-o header_top_right_li header_top_right_li_4",
-    },
-    {
-      class: "fa fa-server header_top_right_li header_top_right_li_3",
-    },
-    {
-      class: "fa fa-bell-o header_top_right_li header_top_right_li_2",
-    },
-    {
-      class: "fa fa-moon-o header_top_right_li header_top_right_li_1 ",
-    },
-  ];
+
   return (
     <div
       style={{
@@ -71,13 +73,13 @@ const Header = (props) => {
         })}
         <img
           className="header_top_right header_top_right_img"
-          src={avata_1}
+          src={avatar_1}
           alt="avatar"
         ></img>
         {header_right.map((header_right) => {
           return (
             <ul className="header_top_right">
-              <i class={header_right.class} aria-hidden="true"></i>
+              <i className={header_right.class} aria-hidden="true"></i>
             </ul>
           );
         })}
