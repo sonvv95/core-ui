@@ -1,10 +1,8 @@
-import './App.css';
-import LayoutTest from './test/LayoutTest';
+import "./App.css";
+import LayoutTest from "./test/LayoutTest";
 
 function App() {
-  return (
-    <LayoutTest />
-  );
+  return <LayoutTest />;
 }
 
 export default App;
