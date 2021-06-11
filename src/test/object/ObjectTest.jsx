@@ -85,7 +85,6 @@ const ObjectTest = (props) => {
 
   const bai4 = (matrix, number) => {
     let coordinate;
-    console.log("test1", matrix);
     let tmp = [...matrix.map((v) => [...v])];
     matrix.forEach((value, index) => {
       value.forEach((val, idx) => {
@@ -96,10 +95,15 @@ const ObjectTest = (props) => {
     });
 
     let sr = coordinate.row ? coordinate.row - 1 : 0;
-    let er = coordinate.row < tmp.length - 1 ? coordinate.row + 1 : tmp.length;
+    let er =
+      coordinate.row < matrix.length - 1
+        ? coordinate.row + 1
+        : matrix.length - 1;
     let sc = coordinate.col ? coordinate.col - 1 : 0;
-    let ec = coordinate.col < tmp.length - 1 ? coordinate.col + 1 : tmp.length;
-
+    let ec =
+      coordinate.col < matrix.length - 1
+        ? coordinate.col + 1
+        : matrix.length - 1;
     for (let i = sr; i <= er; i++) {
       for (let j = sc; j <= ec; j++) {
         if (!(i === coordinate.row && j === coordinate.col)) {
@@ -114,7 +118,7 @@ const ObjectTest = (props) => {
   return (
     <div>
       {/* <pre>{js_beautify(JSON.stringify(Test1()))}</pre> */}
-      <pre>{js_beautify(JSON.stringify(bai4(TEST_4, 7)))}</pre>
+      <pre>{js_beautify(JSON.stringify(bai4(TEST_4, 13)))}</pre>
       {/* <pre>{js_beautify(JSON.stringify(Test1_XapXepLonDenNho()))}</pre>
       <pre>{js_beautify(JSON.stringify(Test1Cach2()))}</pre>
       <pre>{js_beautify(JSON.stringify(Test2cach2()))}</pre> */}
