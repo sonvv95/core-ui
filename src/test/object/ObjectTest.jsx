@@ -1,6 +1,6 @@
 import js_beautify from "js-beautify";
 import React from "react";
-import { test1, test2 } from "./objectDemos";
+import { test1, test2, TEST_4 } from "./objectDemos";
 
 const ObjectTest = (props) => {
   // const [openSideBar, setOpen] = useState(true);
@@ -83,25 +83,41 @@ const ObjectTest = (props) => {
     return test1?.data?.sort((item1, item2) => item2.id - item1.id);
   };
 
-  // []
-  // [1, 2, 3, 4]
-  //   .filter((v) => !v % 2)
+  const bai4 = (matrix, number) => {
+    let coordinate;
+    console.log("test1", matrix);
+    let tmp = [...matrix.map((v) => [...v])];
+    matrix.forEach((value, index) => {
+      value.forEach((val, idx) => {
+        if (matrix[index][idx] === number) {
+          coordinate = { row: index, col: idx };
+        }
+      });
+    });
 
-  //   [(1, 2, 3, 4)].reduce((value, current, index) => {
-  //     if (current % 2) {
-  //       return value;
-  //     } else {
-  //       return [...value, current];
-  //     }
-  //   }, []);
+    let sr = coordinate.row ? coordinate.row - 1 : 0;
+    let er = coordinate.row < tmp.length - 1 ? coordinate.row + 1 : tmp.length;
+    let sc = coordinate.col ? coordinate.col - 1 : 0;
+    let ec = coordinate.col < tmp.length - 1 ? coordinate.col + 1 : tmp.length;
+
+    for (let i = sr; i <= er; i++) {
+      for (let j = sc; j <= ec; j++) {
+        if (!(i === coordinate.row && j === coordinate.col)) {
+          console.log({ i, j });
+          tmp[i][j] = 0;
+        }
+      }
+    }
+    return tmp;
+  };
 
   return (
     <div>
       {/* <pre>{js_beautify(JSON.stringify(Test1()))}</pre> */}
-      <pre>{js_beautify(JSON.stringify(Test1_XapXepNhoDenLon()))}</pre>
-      <pre>{js_beautify(JSON.stringify(Test1_XapXepLonDenNho()))}</pre>
+      <pre>{js_beautify(JSON.stringify(bai4(TEST_4, 7)))}</pre>
+      {/* <pre>{js_beautify(JSON.stringify(Test1_XapXepLonDenNho()))}</pre>
       <pre>{js_beautify(JSON.stringify(Test1Cach2()))}</pre>
-      <pre>{js_beautify(JSON.stringify(Test2cach2()))}</pre>
+      <pre>{js_beautify(JSON.stringify(Test2cach2()))}</pre> */}
       {/* <pre>{js_beautify(JSON.stringify(Test2cach3()))}</pre> */}
       {/* <pre>{js_beautify(JSON.stringify(Test1()))}</pre>
       <pre>{js_beautify(JSON.stringify(Test1()))}</pre> */}

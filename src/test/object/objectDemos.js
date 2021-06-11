@@ -56,7 +56,6 @@ var son = {
     chain: "C",
   },
 };
-console.log(son);
 
 export const result_test1 = [
   {
@@ -209,8 +208,6 @@ export const test3 = [
 
 const test3_1 = test3[0];
 
-console.log(test3_1);
-
 export const result_test3 = [
   { id: 1, name: "Đại" },
   { id: 2, name: "Dương" },
@@ -221,10 +218,11 @@ export const result_test3 = [
 // đệ quy
 //Flat  object test 3 về 1 mảng có tất cả các tên
 
-export const result_test4 = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
+export const TEST_4 = [
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+  [13, 14, 15, 16],
 ];
 
 // viết 1 fuction có đầu vào là 1 số và đầu ra gồm  2 thứ

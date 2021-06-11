@@ -13,7 +13,7 @@ const LayoutTest = (props) => {
         <Header setOpen={setOpen} />
         {/* <Content /> */}
         <ObjectTest />
-        <ObjectTest2 />
+        {/* <ObjectTest2 /> */}
       </div>
     </div>
   );
