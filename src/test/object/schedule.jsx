@@ -11,7 +11,11 @@ const Schedule = () => {
         {
           subject: "Toan",
           name: "Trang",
-          schedule: [{ day: "T2", time: "13h30" }],
+          schedule: [
+            { day: "T2", time: "13h30" },
+            { day: "T3", time: "13h30" },
+            { day: "T5", time: "13h30" },
+          ],
         },
         {
           subject: "Van",

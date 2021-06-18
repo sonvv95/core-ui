@@ -177,25 +177,6 @@ const ObjectTest = (props) => {
     // []
     // [1, 2, 3, 4]
     //   .filter((v) => !v % 2)
-    let sr = coordinate.row ? coordinate.row - 1 : 0;
-    let er =
-      coordinate.row < matrix.length - 1
-        ? coordinate.row + 1
-        : matrix.length - 1;
-    let sc = coordinate.col ? coordinate.col - 1 : 0;
-    let ec =
-      coordinate.col < matrix.length - 1
-        ? coordinate.col + 1
-        : matrix.length - 1;
-    for (let i = sr; i <= er; i++) {
-      for (let j = sc; j <= ec; j++) {
-        if (!(i === coordinate.row && j === coordinate.col)) {
-          console.log({ i, j });
-          tmp[i][j] = 0;
-        }
-      }
-    }
-    return tmp;
   };
 
   return (
@@ -207,9 +188,7 @@ const ObjectTest = (props) => {
       {/* <pre>{js_beautify(JSON.stringify(Test1Cach2()))}</pre> */}
       {/* <pre>{js_beautify(JSON.stringify(Test2cach2()))}</pre> */}
       {/* <pre>{js_beautify(JSON.stringify(Test4(TEST_4, 7)))}</pre> */}
-      <pre>{js_beautify(JSON.stringify(bai5()))}</pre>
       {/* <pre>{js_beautify(JSON.stringify(Test1()))}</pre> */}
-      <pre>{js_beautify(JSON.stringify(bai4(TEST_4, 13)))}</pre>
       {/* <pre>{js_beautify(JSON.stringify(Test1_XapXepLonDenNho()))}</pre>
       <pre>{js_beautify(JSON.stringify(Test1Cach2()))}</pre>
       <pre>{js_beautify(JSON.stringify(Test2cach2()))}</pre> */}

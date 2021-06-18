@@ -3,6 +3,7 @@ import AsideBar from "./AsideBar";
 import Header from "./Components/Header/Header";
 // import Content from "./Content.jsx";
 import ObjectTest from "./object/ObjectTest";
+import Schedule from "./object/schedule";
 
 const LayoutTest = (props) => {
   const [openSideBar, setOpen] = useState(true);
@@ -12,7 +13,7 @@ const LayoutTest = (props) => {
       <div style={{ width: "100%", display: "flex", flexDirection: "column" }}>
         <Header setOpen={setOpen} />
         {/* <Content /> */}
-        <ObjectTest />
+        <Schedule />
         {/* <ObjectTest2 /> */}
       </div>
     </div>
