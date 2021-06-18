@@ -56,7 +56,7 @@ var son = {
     chain: "C",
   },
 };
-console.log(son);
+// console.log(son);
 
 export const result_test1 = [
   {
@@ -209,7 +209,7 @@ export const test3 = [
 
 const test3_1 = test3[0];
 
-console.log(test3_1);
+// console.log(test3_1);
 
 export const result_test3 = [
   { id: 1, name: "Đại" },
@@ -221,12 +221,61 @@ export const result_test3 = [
 // đệ quy
 //Flat  object test 3 về 1 mảng có tất cả các tên
 
-export const result_test4 = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
+export const TEST_4 = [
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+  [13, 14, 15, 16],
 ];
 
+export const Test_5 = [
+  {
+    id: 1,
+    profile: { name: "dai", age: 25 },
+    country: "VN",
+    class: "5A1",
+    teacher: [
+      {
+        subject: "Toan",
+        name: "Trang",
+        schedule: [{ day: "T2", time: "12h30" }],
+      },
+      {
+        subject: "Van",
+        name: "Huy",
+        schedule: [{ day: "T3", time: "13h30" }],
+      },
+      {
+        subject: "Sinh",
+        name: "Dat",
+        schedule: [{ day: "T4", time: "14h30" }],
+      },
+    ],
+  },
+  {
+    id: 2,
+    profile: { name: "Huy", age: 25 },
+    country: "VN",
+    class: "5A1",
+    teacher: [
+      {
+        subject: "Toan",
+        name: "Trang",
+        schedule: [{ day: "T2", time: "15h30" }],
+      },
+      {
+        subject: "Van",
+        name: "Huy",
+        schedule: [{ day: "T2", time: "16h30" }],
+      },
+      {
+        subject: "Sinh",
+        name: "Dat",
+        schedule: [{ day: "T2", time: "9h30" }],
+      },
+    ],
+  },
+];
 // viết 1 fuction có đầu vào là 1 số và đầu ra gồm  2 thứ
 // VD function bai4(4){... return  {row:1,column:0,newArray:[
 //   [0,0,3],

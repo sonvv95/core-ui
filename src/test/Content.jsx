@@ -70,6 +70,8 @@ const Items = [
   },
 ];
 
+// console.log(Items?.id);
+
 const card = [
   {
     number: 9.832,

@@ -50,6 +50,8 @@ const ObjectTest2 = (props) => {
 
   const Test2Cach2 = () => {
     return Object.entries(test2).reduce((value, current, index) => {
+      console.log(current?.[1].status);
+
       if (current?.[1].status === "open") {
         return [...value, { store: current?.[0], ...current[1] }];
       }

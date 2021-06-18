@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import AsideBar from "./AsideBar";
 import Header from "./Components/Header/Header";
+// import Content from "./Content.jsx";
 import ObjectTest from "./object/ObjectTest";
-import ObjectTest2 from "./object/ObjectTest2";
+import Schedule from "./object/schedule.jsx";
 
 const LayoutTest = (props) => {
   const [openSideBar, setOpen] = useState(true);
@@ -13,7 +14,8 @@ const LayoutTest = (props) => {
         <Header setOpen={setOpen} />
         {/* <Content /> */}
         <ObjectTest />
-        <ObjectTest2 />
+        {/* <ObjectTest2 /> */}
+        <Schedule />
       </div>
     </div>
   );
