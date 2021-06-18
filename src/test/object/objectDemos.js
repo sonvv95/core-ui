@@ -56,7 +56,6 @@ var son = {
     chain: "C",
   },
 };
-// console.log(son);
 
 export const result_test1 = [
   {
