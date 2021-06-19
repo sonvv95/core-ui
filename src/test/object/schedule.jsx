@@ -13,6 +13,7 @@ const Schedule = () => {
           name: "Trang",
           schedule: [
             { day: "T2", time: "13h30" },
+            { day: "T2", time: "15h30" },
             { day: "T3", time: "13h30" },
             { day: "T5", time: "13h30" },
           ],
@@ -20,7 +21,10 @@ const Schedule = () => {
         {
           subject: "Van",
           name: "Huy",
-          schedule: [{ day: "T4", time: "15h30" }],
+          schedule: [
+            { day: "T2", time: "13h30" },
+            { day: "T4", time: "15h30" },
+          ],
         },
         {
           subject: "Su",
@@ -65,22 +69,7 @@ const Schedule = () => {
     { day: "T5" },
     { day: "T6" },
   ];
-  // const bai5 = () => {
-  //   return Test_5.map((test) => {
-  //     return test?.teacher?.reduce((v, c) => {
-  //       return [
-  //         ...v,
-  //         c.schedule.reduce((value, current) => {
-  //           return {
-  //             ...value,
-  //             [current?.day]: [...(value?.[current?.day] || []), current],
-  //             subject: c.subject,
-  //           };
-  //         }, {}),
-  //       ];
-  //     }, []);
-  //   });
-  // };
+
   const bai5 = () => {
     return Test_5.map((test) => {
       return test?.teacher?.reduce((v, c) => {
@@ -97,18 +86,30 @@ const Schedule = () => {
             };
           }, {}),
         ];
-      }, []);
+      }, {});
     });
   };
 
-  const abc = bai5();
-  console.log(abc[0]);
-
-  const ngay = calendar.map((day) => day.day);
-  // console.log(ngay);
-
-  // console.log(Test_5);
-  // const profileName = (Test_5) => {
+  const bai5_2 = () => {
+    return Test_5.map((test) => {
+      const schedule = test.teacher.reduce((value, current) => {
+        return {
+          ...value,
+          ...current.schedule.reduce((v, c, index) => {
+            return {
+              ...v,
+              [c.day]: [
+                ...(value[c.day] || []),
+                ...(v[c.day] || []),
+                { subject: current.subject, name: current.name, time: c.time },
+              ],
+            };
+          }, {}),
+        };
+      }, {});
+      return { profile: test.profile, class: test.class, ...schedule };
+    });
+  };
 
   return (
     <div>
@@ -122,7 +123,7 @@ const Schedule = () => {
           ))}
         </thead>
         <tbody>
-          {Test_5.map((test) => {
+          {bai5_2().map((test) => {
             return (
               <tr
                 style={{
@@ -134,216 +135,14 @@ const Schedule = () => {
                 <td>{test?.profile?.name}</td>
                 <td>{test?.class}</td>
                 <td>{test?.profile?.age}</td>
-                <td>
-                  {(test?.teacher).map((list) => {
-                    return (
-                      <div style={{ display: "flex" }}>
-                        <div style={{ flex: 1 }}>
-                          {list.schedule
-                            .filter((v) => v.day === "T2")
-                            .map((v) => v.time)}
-                        </div>
-                        <div
-                          style={{
-                            flex: 0.05,
-                            textAlign: "center",
-                          }}
-                        >
-                          {list.schedule
-                            .filter((v) => v.day === "T2")
-                            .map((v) => {
-                              return <div>-</div>;
-                            })}
-                        </div>
-                        <div style={{ flex: 1 }}>
-                          {list.schedule
-                            .filter((v) => v.day === "T2")
-                            .map((v) => {
-                              return {
-                                ...v,
-                                subject: list.subject,
-                              };
-                            })
-                            .map((v) => v.subject)}
-                        </div>
-                      </div>
-                    );
-                  })}
-                </td>
-                <td>
-                  {(test?.teacher).map((list) => {
-                    return (
-                      <div style={{ display: "flex" }}>
-                        <div style={{ flex: 1 }}>
-                          {list.schedule
-                            .filter((v) => v.day === "T3")
-                            .map((v) => v.time)}
-                        </div>
-                        <div
-                          style={{
-                            flex: 0.05,
-                            textAlign: "center",
-                          }}
-                        >
-                          {list.schedule
-                            .filter((v) => v.day === "T3")
-                            .map((v) => {
-                              return <div>-</div>;
-                            })}
-                        </div>
-                        <div style={{ flex: 1 }}>
-                          {list.schedule
-                            .filter((v) => v.day === "T3")
-                            .map((v) => {
-                              return {
-                                ...v,
-                                subject: list.subject,
-                              };
-                            })
-                            .map((v) => v.subject)}
-                        </div>
-                      </div>
-                    );
-                  })}
-                </td>
-                <td>
-                  {(test?.teacher).map((list) => {
-                    return (
-                      <div style={{ display: "flex" }}>
-                        <div style={{ flex: 1 }}>
-                          {list.schedule
-                            .filter((v) => v.day === "T4")
-                            .map((v) => v.time)}
-                        </div>
-                        <div
-                          style={{
-                            flex: 0.05,
-
-                            textAlign: "center",
-                          }}
-                        >
-                          {list.schedule
-                            .filter((v) => v.day === "T4")
-                            .map((v) => {
-                              return <div> - </div>;
-                            })}
-                        </div>
-                        <div style={{ flex: 1 }}>
-                          {list.schedule
-                            .filter((v) => v.day === "T4")
-                            .map((v) => {
-                              return {
-                                ...v,
-                                subject: list.subject,
-                              };
-                            })
-                            .map((v) => v.subject)}
-                        </div>
-                      </div>
-                    );
-                  })}
-                </td>
-                <td>
-                  {(test?.teacher).map((list) => {
-                    return (
-                      <div style={{ display: "flex" }}>
-                        <div style={{ flex: 1 }}>
-                          {list.schedule
-                            .filter((v) => v.day === "T5")
-                            .map((v) => v.time)}
-                        </div>
-                        <div
-                          style={{
-                            flex: 0.05,
-
-                            textAlign: "center",
-                          }}
-                        >
-                          {list.schedule
-                            .filter((v) => v.day === "T5")
-                            .map((v) => {
-                              return <div>-</div>;
-                            })}
-                        </div>
-                        <div style={{ flex: 1 }}>
-                          {list.schedule
-                            .filter((v) => v.day === "T5")
-                            .map((v) => {
-                              return {
-                                ...v,
-                                subject: list.subject,
-                              };
-                            })
-                            .map((v) => v.subject)}
-                        </div>
-                      </div>
-                    );
-                  })}
-                </td>
-                <td>
-                  {(test?.teacher).map((list) => {
-                    return (
-                      <div style={{ display: "flex" }}>
-                        <div style={{ flex: 1 }}>
-                          {list.schedule
-                            .filter((v) => v.day === "T6")
-                            .map((v) => v.time)}
-                        </div>
-                        <div
-                          style={{
-                            flex: 0.05,
-
-                            textAlign: "center",
-                          }}
-                        >
-                          {list.schedule
-                            .filter((v) => v.day === "T6")
-                            .map((v) => {
-                              return <div>-</div>;
-                            })}
-                        </div>
-                        <div style={{ flex: 1 }}>
-                          {list.schedule
-                            .filter((v) => v.day === "T6")
-                            .map((v) => {
-                              return {
-                                ...v,
-                                subject: list.subject,
-                              };
-                            })
-                            .map((v) => v.subject)}
-                        </div>
-                      </div>
-                    );
-                  })}
-                </td>
-              </tr>
-              // <td>{test?.profile?.name}</td>
-            );
-          })}
-        </tbody>
-      </table>
-      <table style={{ width: "100%", background: "grey" }}>
-        <thead style={{ width: "100%" }}>
-          <th>Tên</th>
-          <th>Lớp </th>
-          <th>Tuổi</th>
-          {calendar.map((day) => (
-            <th>{day.day}</th>
-          ))}
-        </thead>
-        <tbody>
-          {Test_5.map((test) => {
-            return (
-              <tr
-                style={{
-                  display: "float",
-                  textAlign: "center",
-                  background: "green",
-                }}
-              >
-                {abc[0]?.map((v) => {
-                  return <td>{v.name}</td>;
+                {["T2", "T3", "T4", "T5", "T6"].map((v) => {
+                  return (
+                    <td key={v}>
+                      {test[v]?.map((v) => (
+                        <p>{`${v.subject}(${v.name})-${v.time}`}</p>
+                      )) || "trống tiết"}
+                    </td>
+                  );
                 })}
               </tr>
             );
