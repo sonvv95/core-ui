@@ -1,6 +1,6 @@
 import js_beautify from "js-beautify";
 import React from "react";
-import { test1, test2, TEST_4, Test_5 } from "./objectDemos";
+import { test1, test2, Test_5 } from "./objectDemos";
 
 const ObjectTest = (props) => {
   // const [openSideBar, setOpen] = useState(true);
@@ -26,8 +26,6 @@ const ObjectTest = (props) => {
       });
     }, []);
   };
-
-  console.log(Object.entries(test2));
 
   const Test2 = () => {
     return Object.entries(test2)
@@ -136,26 +134,6 @@ const ObjectTest = (props) => {
       return tmp;
     };
 
-    const bai5 = () => {
-      return Test_5.map((test) => {
-        return test?.teacher?.reduce((v, c) => {
-          return [
-            ...v,
-            c.schedule.reduce((value, current) => {
-              return {
-                ...value,
-                [current?.day]: [...(value?.[current?.day] || []), current],
-                // subject: c?.subject,
-                // name: test?.profile?.name,
-                // class: test?.class,
-                // teacher: test?.teacher,
-              };
-            }, {}),
-          ];
-        }, []);
-      });
-    };
-
     // console.log(Object.entries(bai5));
 
     // const Test4 = () => {
@@ -178,10 +156,58 @@ const ObjectTest = (props) => {
     // [1, 2, 3, 4]
     //   .filter((v) => !v % 2)
   };
+  // const bai5 = () => {
+  //   return Test_5.map((test) => {
+  //     const schedule = test.teacher.reduce((value, current) => {
+  //       return {
+  //         ...value,
+  //         ...current.schedule.reduce((v, c, index) => {
+  //           return {
+  //             ...v,
+  //             [c.day]: [
+  //               ...(value[c.day] || []),
+  //               ...(v[c.day] || []),
+  //               { subject: current.subject, name: current.name, time: c.time },
+  //             ],
+  //           };
+  //         }, {}),
+  //       };
+  //     }, {});
+  //     return { profile: test.profile, class: test.class, ...schedule };
+  //   });
+  // };
+
+  const bai5 = () => {
+    return Test_5.map((test) => {
+      const schedule = test.teacher.reduce((v, c) => {
+        return {
+          ...v,
+          ...c.schedule.reduce((v2, c2) => {
+            return {
+              ...v2,
+              [c2.day]: [
+                ...(v[c2.day] || []),
+                ...(v2[c2.day] || []),
+                { subject: c.subject, name: c.name, time: c2.time },
+              ],
+            };
+          }, {}),
+        };
+      }, {});
+      return { profile: test.profile, class: test.class, ...schedule };
+    });
+  };
+
+  const bcd = () => {
+    return Object.entries(test2)
+      ?.filter((v) => v?.[1]?.status === "open")
+      ?.map((v) => ({ store: v?.[0], ...v?.[1] }));
+  };
+  console.log(Object.entries(test2));
 
   return (
     <div>
-      <pre>{js_beautify(JSON.stringify(Test1()))}</pre>
+      {/* <pre>{js_beautify(JSON.stringify(Test1()))}</pre> */}
       {/* <pre>{js_beautify(JSON.stringify(bubbleSort(test1.data)))}</pre> */}
       {/* <pre>{js_beautify(JSON.stringify(Test1_XapXepLonDenNho()))}</pre> */}
       {/* <pre>{js_beautify(JSON.stringify(bubbleSort()))}</pre> */}
@@ -193,8 +219,12 @@ const ObjectTest = (props) => {
       <pre>{js_beautify(JSON.stringify(Test1Cach2()))}</pre>
       <pre>{js_beautify(JSON.stringify(Test2cach2()))}</pre> */}
       {/* <pre>{js_beautify(JSON.stringify(Test2cach3()))}</pre> */}
-      <pre>{js_beautify(JSON.stringify(Test2()))}</pre>
-      {/* <pre>{js_beautify(JSON.stringify(Test1()))}</pre> */}
+      {/* <pre>{js_beautify(JSON.stringify(Test2()))}</pre> */}
+      {/* <pre>{js_beautify(JSON.stringify(bai5()))}</pre> */}
+      {/* <pre>{js_beautify(JSON.stringify(Test_5))}</pre> */}
+      ----------------------------------------------------------------------------
+      {/* <pre>{js_beautify(JSON.stringify(bai5()))}</pre> */}
+      <pre>{js_beautify(JSON.stringify(bcd()))}</pre>
     </div>
   );
 };

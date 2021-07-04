@@ -237,7 +237,11 @@ export const Test_5 = [
       {
         subject: "Toan",
         name: "Trang",
-        schedule: [{ day: "T2", time: "12h30" }],
+        schedule: [
+          { day: "T2", time: "12h30" },
+          { day: "T2", time: "12h30" },
+          { day: "T2", time: "12h30" },
+        ],
       },
       {
         subject: "Van",
