@@ -9,6 +9,7 @@ const ObjectTest2 = (props) => {
     //   Action vs mang test1 owr day
     return test1.data.reduce((value, current, index) => {
       const isContain = value.find((v) => v.chain === current.chain);
+      console.log(isContain);
       if (!isContain) {
         return [
           ...value,
@@ -73,7 +74,7 @@ const ObjectTest2 = (props) => {
   //   }, []);
   return (
     <div>
-      {/* <pre>{js_beautify(JSON.stringify(Test1()))}</pre> */}
+      <pre>{js_beautify(JSON.stringify(Test1()))}</pre>
       <pre>{js_beautify(JSON.stringify(Test1Cach2()))}</pre>
       <pre>{js_beautify(JSON.stringify(Test2Cach2()))}</pre>
       {/* <pre>{js_beautify(JSON.stringify(Test1()))}</pre>

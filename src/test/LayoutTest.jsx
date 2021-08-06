@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import Image1 from "../img/image1.jpg";
 import AsideBar from "./AsideBar";
 import Header from "./Components/Header/Header";
+import CheckBox from "./object/checkBox";
+import ObjectTest2 from "./object/ObjectTest2";
 import Schedule from "./object/schedule";
-import App from "./object/table";
+import Table from "./object/table";
 
 const LayoutTest = (props) => {
   const [openSideBar, setOpen] = useState(true);
@@ -13,9 +16,12 @@ const LayoutTest = (props) => {
         <Header setOpen={setOpen} />
         {/* <Content /> */}
         {/* <ObjectTest /> */}
+        <ObjectTest2 />
+
         <Schedule />
-        {/* <ObjectTest2 /> */}
-        <App />
+        <Table />
+        <CheckBox />
+        <img src={Image1} alt="" />
       </div>
     </div>
   );
