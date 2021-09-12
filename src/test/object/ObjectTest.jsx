@@ -208,7 +208,7 @@ const ObjectTest = (props) => {
   return (
     <div>
       {/* <pre>{js_beautify(JSON.stringify(Test1()))}</pre> */}
-      {/* <pre>{js_beautify(JSON.stringify(bubbleSort(test1.data)))}</pre> */}
+      <pre>{js_beautify(JSON.stringify(bubbleSort(test1.data)))}</pre>
       {/* <pre>{js_beautify(JSON.stringify(Test1_XapXepLonDenNho()))}</pre> */}
       {/* <pre>{js_beautify(JSON.stringify(bubbleSort()))}</pre> */}
       {/* <pre>{js_beautify(JSON.stringify(Test1Cach2()))}</pre> */}

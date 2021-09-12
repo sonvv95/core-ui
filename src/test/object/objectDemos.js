@@ -206,6 +206,55 @@ export const test3 = [
   },
 ];
 
+export const test3_2 = [
+  {
+    id: 1,
+    name: "Đại",
+  },
+  {
+    id: 2,
+    name: "Trang",
+    parent_id: 1,
+  },
+  {
+    id: 3,
+    name: "Sơn",
+    parent_id: 1,
+  },
+  {
+    id: 4,
+    name: "Dương",
+    parent_id: 2,
+  },
+  {
+    id: 5,
+    name: "Hiếu",
+    parent_id: 2,
+  },
+  {
+    id: 6,
+    name: "Đại",
+    parent_id: 2,
+  },
+  {
+    id: 7,
+    name: "Khánh",
+    parent_id: 1,
+  },
+  {
+    id: 8,
+    name: "Khoa",
+  },
+  {
+    id: 9,
+    name: "HIếu",
+  },
+  {
+    id: 10,
+    name: "Sơn",
+  },
+];
+
 const test3_1 = test3[0];
 
 // console.log(test3_1);

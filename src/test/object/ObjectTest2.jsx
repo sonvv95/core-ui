@@ -1,6 +1,6 @@
 import js_beautify from "js-beautify";
 import React from "react";
-import { test1, test2 } from "./objectDemos";
+import { test1, test2, test3, test3_2 } from "./objectDemos";
 
 const ObjectTest2 = (props) => {
   // const [openSideBar, setOpen] = useState(true);
@@ -9,7 +9,7 @@ const ObjectTest2 = (props) => {
     //   Action vs mang test1 owr day
     return test1.data.reduce((value, current, index) => {
       const isContain = value.find((v) => v.chain === current.chain);
-      console.log(isContain);
+      // console.log(isContain);
       if (!isContain) {
         return [
           ...value,
@@ -31,7 +31,7 @@ const ObjectTest2 = (props) => {
     }, []);
   };
 
-  console.log(Object.entries(test1));
+  // console.log(Object.entries(test1));
 
   const Test1Cach2 = () => {
     return test1.data.reduce((value, current, index) => {
@@ -60,6 +60,51 @@ const ObjectTest2 = (props) => {
     }, []);
   };
 
+  const Test3 = (listAccount) => {
+    let newHumenList = [];
+    const flatten = (arr) => {
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i].children?.length > 0) {
+          newHumenList.push({
+            id: arr[i].id,
+            name: arr[i].name,
+          });
+          flatten(arr[i].children);
+        } else {
+          newHumenList.push(arr[i]);
+        }
+      }
+    };
+    flatten(listAccount);
+    return newHumenList;
+  };
+
+  const Test3_2 = (list) => {
+    let newHumenList = [];
+    const tree = (arr) => {
+      for (let i = arr.length; 0 < i; i--) {
+        if (arr[i--]?.id === arr[i].parent_id && arr[i--]?.parent_id > 0) {
+          newHumenList.push({
+            id: arr[i--].id,
+            name: arr[i--].name,
+            parent_id: arr[i--]?.parent_id,
+            children: [
+              {
+                id: arr[i].id,
+                name: arr[i].name,
+              },
+            ],
+          });
+          tree(arr[i]);
+        } else {
+          newHumenList.push(arr[i]);
+        }
+      }
+    };
+    tree(list);
+    return newHumenList;
+  };
+
   // []
   // [1, 2, 3, 4]
   // .filter((v) => !v % 2);
@@ -74,11 +119,13 @@ const ObjectTest2 = (props) => {
   //   }, []);
   return (
     <div>
-      <pre>{js_beautify(JSON.stringify(Test1()))}</pre>
-      <pre>{js_beautify(JSON.stringify(Test1Cach2()))}</pre>
-      <pre>{js_beautify(JSON.stringify(Test2Cach2()))}</pre>
+      {/* <pre>{js_beautify(JSON.stringify(Test1()))}</pre> */}
+      {/* <pre>{js_beautify(JSON.stringify(Test1Cach2()))}</pre> */}
+      {/* <pre>{js_beautify(JSON.stringify(Test2Cach2()))}</pre> */}
       {/* <pre>{js_beautify(JSON.stringify(Test1()))}</pre>
       <pre>{js_beautify(JSON.stringify(Test1()))}</pre> */}
+      <pre>{js_beautify(JSON.stringify(Test3(test3)))}</pre>
+      <pre>{js_beautify(JSON.stringify(Test3_2(test3_2)))}</pre>
     </div>
   );
 };
