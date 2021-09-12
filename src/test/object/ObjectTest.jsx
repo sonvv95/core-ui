@@ -198,45 +198,33 @@ const ObjectTest = (props) => {
     });
   };
 
-  const bai10 = () => {
-    return test_10.reduce((v1, v2, c1, c2) => {
-      if (
-        c1.is_parent === true &&
-        c1.account_number === c2.account_number.slice(0, -1)
-      ) {
+  const bai_5_1 = () => {
+    return Test_5.map((v) => {
+      const schedule = v.teacher.reduce((v2, c2) => {
         return {
-          ...v1,
-          children: [...v2],
-        };
-      }
-    });
-  };
-
-  const bai_5_1 =()=>{
-    return Test_5.map(v=>{
-      const schedule = v.teacher.reduce((v2,c2)=>{
-        return{
-          ...v2, 
-          ...c2.schedule.reduce((v3,c3)=>{
-            return{
+          ...v2,
+          ...c2.schedule.reduce((v3, c3) => {
+            return {
               ...v3,
-              [c3.day]: [{
-                subject: c2.subject,
-                name: c2.name,
-                time: c3.time, 
-              }]
-            }
-          },{})
-        }
-      },{})
-      console.log('schedule: ',schedule)
-      return{
+              [c3.day]: [
+                {
+                  subject: c2.subject,
+                  name: c2.name,
+                  time: c3.time,
+                },
+              ],
+            };
+          }, {}),
+        };
+      }, {});
+      console.log("schedule: ", schedule);
+      return {
         profile: v.profile,
         class: v.class,
         schedule: schedule,
-      }
-    })
-  }
+      };
+    });
+  };
 
   const bcd = () => {
     return Object.entries(test2)
@@ -248,7 +236,7 @@ const ObjectTest = (props) => {
   return (
     <div>
       {/* <pre>{js_beautify(JSON.stringify(Test1()))}</pre> */}
-      {/* <pre>{js_beautify(JSON.stringify(bubbleSort(test1.data)))}</pre> */}
+      <pre>{js_beautify(JSON.stringify(bubbleSort(test1.data)))}</pre>
       {/* <pre>{js_beautify(JSON.stringify(Test1_XapXepLonDenNho()))}</pre> */}
       {/* <pre>{js_beautify(JSON.stringify(bubbleSort()))}</pre> */}
       {/* <pre>{js_beautify(JSON.stringify(Test1Cach2()))}</pre> */}
@@ -271,5 +259,3 @@ const ObjectTest = (props) => {
 };
 
 export default ObjectTest;
-
-
