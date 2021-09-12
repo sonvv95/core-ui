@@ -1,6 +1,6 @@
 import js_beautify from "js-beautify";
 import React from "react";
-import { test1, test2, Test_5 } from "./objectDemos";
+import { test1, test2, test_10, Test_5 } from "./objectDemos";
 
 const ObjectTest = (props) => {
   // const [openSideBar, setOpen] = useState(true);
@@ -198,6 +198,46 @@ const ObjectTest = (props) => {
     });
   };
 
+  const bai10 = () => {
+    return test_10.reduce((v1, v2, c1, c2) => {
+      if (
+        c1.is_parent === true &&
+        c1.account_number === c2.account_number.slice(0, -1)
+      ) {
+        return {
+          ...v1,
+          children: [...v2],
+        };
+      }
+    });
+  };
+
+  const bai_5_1 =()=>{
+    return Test_5.map(v=>{
+      const schedule = v.teacher.reduce((v2,c2)=>{
+        return{
+          ...v2, 
+          ...c2.schedule.reduce((v3,c3)=>{
+            return{
+              ...v3,
+              [c3.day]: [{
+                subject: c2.subject,
+                name: c2.name,
+                time: c3.time, 
+              }]
+            }
+          },{})
+        }
+      },{})
+      console.log('schedule: ',schedule)
+      return{
+        profile: v.profile,
+        class: v.class,
+        schedule: schedule,
+      }
+    })
+  }
+
   const bcd = () => {
     return Object.entries(test2)
       ?.filter((v) => v?.[1]?.status === "open")
@@ -220,13 +260,16 @@ const ObjectTest = (props) => {
       <pre>{js_beautify(JSON.stringify(Test2cach2()))}</pre> */}
       {/* <pre>{js_beautify(JSON.stringify(Test2cach3()))}</pre> */}
       {/* <pre>{js_beautify(JSON.stringify(Test2()))}</pre> */}
-      {/* <pre>{js_beautify(JSON.stringify(bai5()))}</pre> */}
+      <pre>{js_beautify(JSON.stringify(bai5()))}</pre>
       {/* <pre>{js_beautify(JSON.stringify(Test_5))}</pre> */}
       ----------------------------------------------------------------------------
-      {/* <pre>{js_beautify(JSON.stringify(bai5()))}</pre> */}
+      <pre>{js_beautify(JSON.stringify(bai10()))}</pre>
       <pre>{js_beautify(JSON.stringify(bcd()))}</pre>
+      <pre>{js_beautify(JSON.stringify(bai_5_1()))}</pre>
     </div>
   );
 };
 
 export default ObjectTest;
+
+

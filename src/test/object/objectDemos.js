@@ -285,3 +285,121 @@ export const Test_5 = [
 //   [4,0,6],
 //   [0,0,9]
 // ]}}
+
+
+
+export const test = [
+  { id: 1, account: "1123" },
+  { id: 2, account: "23234" },
+  { id: 3, account: "112342" },
+  { id: 4, account: "1" },
+  { id: 5, account: "11" },
+  { id: 6, account: "4523" },
+  { id: 7, account: "4565423" },
+  { id: 8, account: "4565423" }
+];
+
+
+const resutl_test = [
+  { id: 1, account: "1123" },
+  { id: 3, account: "112342" },
+  { id: 4, account: "1" },
+  { id: 5, account: "11" },
+]
+
+
+export const test_10 = [
+  {
+      account_name: "Tiền mặt",
+      account_number: "111",
+      id: 1,
+      is_parent: true,
+  },
+  {
+      account_name: "Tiền Việt Nam",
+      account_number: "1111",
+      id: 2,
+      is_parent: true,
+  },
+  {
+      account_name: "Tiền Việt Nam ....",
+      account_number: "11111",
+      id: 3,
+      is_parent: false,
+  },
+  {
+      account_name: "Ngoại tệ",
+      account_number: "1112",
+      id: 4,
+      is_parent: false,
+  },
+  {
+      account_name: "Tiền gửi NH",
+      account_number: "112",
+      id: 5,
+      is_parent: true,
+  },
+  {
+      account_name: "Tiền Việt Nam",
+      account_number: "1121",
+      id: 6,
+      is_parent: false,
+  },
+  {
+      account_name: "Ngoại tệ",
+      account_number: "1122",
+      id: 7,
+      is_parent: false,
+  },
+]
+
+export const result_test_10 = [
+  {
+    account_name: "Tiền mặt",
+    account_number: "111",
+    id: 1,
+    is_parent: true,
+    children: [
+      {
+        account_name: "Tiền Việt Nam",
+        account_number: "1111",
+        id: 2,
+        is_parent: true,
+        children: [
+          {
+            account_name: "Tiền Việt Nam ....",
+            account_number: "11111",
+            id: 3,
+            is_parent: false,
+          }
+        ]
+      },
+      {
+        account_name: "Ngoại tệ",
+        account_number: "1112",
+        id: 4,
+        is_parent: false,
+      }
+    ]
+  },
+  {
+    account_name: "Tiền gửi ngân hàng",
+    account_number: "112",
+    id: 5,
+    is_parent: true,
+    children: [
+      {
+        account_name: "Tiền Việt Nam",
+        account_number: "1121",
+        id: 6,
+        is_parent: false,
+      },
+      {
+        account_name: "Ngoại tệ",
+        account_number: "1122",
+        id: 7,
+        is_parent: false,
+      }
+    ]
+  },
+];

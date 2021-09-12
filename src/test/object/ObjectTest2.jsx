@@ -1,6 +1,6 @@
 import js_beautify from "js-beautify";
 import React from "react";
-import { test1, test2 } from "./objectDemos";
+import { test, test1, test2, test3, test_10 } from "./objectDemos";
 
 const ObjectTest2 = (props) => {
   // const [openSideBar, setOpen] = useState(true);
@@ -60,6 +60,29 @@ const ObjectTest2 = (props) => {
     }, []);
   };
 
+  const Test3 = () => {
+    let newGenerate = [];
+    const flatten = (arr) => {
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i].children?.length > 0) {
+          newGenerate.push({ id: arr[i].id, name: arr[i].name });
+          flatten(arr[i].children);
+        } else {
+          newGenerate.push(arr[i]);
+        }
+      }
+    };
+    flatten(test3);
+    console.log("new", newGenerate);
+  };
+
+  const Test4 =()=>{
+    const result_test = test.filter(user => user.account.startsWith("1"))
+    return result_test;
+  }
+
+  
+
   // []
   // [1, 2, 3, 4]
   // .filter((v) => !v % 2);
@@ -77,6 +100,9 @@ const ObjectTest2 = (props) => {
       <pre>{js_beautify(JSON.stringify(Test1()))}</pre>
       <pre>{js_beautify(JSON.stringify(Test1Cach2()))}</pre>
       <pre>{js_beautify(JSON.stringify(Test2Cach2()))}</pre>
+      <pre>{js_beautify(JSON.stringify(Test3()))}</pre>
+      <pre>{js_beautify(JSON.stringify(Test4()))}</pre>
+      <pre>{js_beautify(JSON.stringify(bai10()))}</pre>
       {/* <pre>{js_beautify(JSON.stringify(Test1()))}</pre>
       <pre>{js_beautify(JSON.stringify(Test1()))}</pre> */}
     </div>

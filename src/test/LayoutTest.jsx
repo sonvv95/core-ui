@@ -3,7 +3,8 @@ import Image1 from "../img/image1.jpg";
 import AsideBar from "./AsideBar";
 import Header from "./Components/Header/Header";
 import CheckBox from "./object/checkBox";
-import ObjectTest2 from "./object/ObjectTest2";
+import ObjectTest from "./object/ObjectTest";
+// import ObjectTest2 from "./object/ObjectTest2";
 import Schedule from "./object/schedule";
 import Table from "./object/table";
 
@@ -15,8 +16,8 @@ const LayoutTest = (props) => {
       <div style={{ width: "100%", display: "flex", flexDirection: "column" }}>
         <Header setOpen={setOpen} />
         {/* <Content /> */}
-        {/* <ObjectTest /> */}
-        <ObjectTest2 />
+        <ObjectTest />
+        {/* <ObjectTest2 /> */}
 
         <Schedule />
         <Table />
